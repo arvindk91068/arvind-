@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Responsive Navigation Example</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+    }
+    header {
+      background: #333;
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav {
+      background: #444;
+      position: relative;
+    }
+    .nav-links {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .nav-links a {
+      color: #fff;
+      padding: 1rem 2rem;
+      text-decoration: none;
+      flex: 1 1 auto;
+      text-align: center;
+      transition: background 0.3s;
+    }
+    .nav-links a:hover {
+      background: #222;
+    }
+    .menu-toggle {
+      display: none;
+      font-size: 2rem;
+      color: #fff;
+      background: none;
+      border: none;
+      position: absolute;
+      right: 1rem;
+      top: 1rem;
+      cursor: pointer;
+    }
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    footer {
+      background: #333;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
+    /* Tablet styles */
+    @media (max-width: 900px) {
+      main {
+        margin: 1rem;
+        padding: 1.5rem;
+      }
+      .nav-links a {
+        padding: 1rem 1rem;
+      }
+    }
+    /* Mobile styles */
+    @media (max-width: 600px) {
+      .menu-toggle {
+        display: block;
+      }
+      .nav-links {
+        flex-direction: column;
+        display: none;
+        width: 100%;
+      }
+      .nav-links.active {
+        display: flex;
+      }
+      .nav-links a {
+        border-top: 1px solid #555;
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Responsive Navigation Example</h1>
+  </header>
+  <nav>
+    <div class="nav-links" id="navLinks">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Service</a>
+      <a href="#">Contact</a>
+      <a href="#">Other</a>
+    </div>
+  </nav>
+  <main>
+    <h2>Welcome!</h2>
+  </main>
+</body>
+</html>
