@@ -42,6 +42,7 @@
             scroll-behavior: smooth;
         }
 
+
         /* Header Styling */
         header {
             background: linear-gradient(90deg, #0d1e3a, #112a52);
