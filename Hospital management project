@@ -30,6 +30,7 @@
             --warning: #ff9800;
         }
 
+
         /* General Body Styling */
         body {
             font-family: 'Roboto', sans-serif;
